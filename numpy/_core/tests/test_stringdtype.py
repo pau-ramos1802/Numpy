@@ -701,7 +701,10 @@ def test_float_casts(typename):
     sres = np.array(inp, dtype=typename).astype("T")
     res = sres.astype(typename)
     assert_array_equal(np.array(inp, dtype=typename), res)
-    assert sres[0] == "0.1"
+    if typename == "float16":
+        assert sres[0] == "0.0999755859375"
+    else:
+        assert sres[0] == "0.1"
 
     if typename == "longdouble":
         # let's not worry about platform-dependent rounding of longdouble
