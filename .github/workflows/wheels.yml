@@ -171,7 +171,7 @@ jobs:
           echo "CIBW_BUILD_FRONTEND=pip; args: --no-build-isolation" >> "$GITHUB_ENV"
 
       - name: Build wheels
-        uses: pypa/cibuildwheel@d04cacbc9866d432033b1d09142936e6a0e2121a  # v2.23.2
+        uses: pypa/cibuildwheel@7c619efba910c04005a835b110b057fc28fd6e93  # v3.2.0
         env:
           CIBW_BUILD: ${{ matrix.python }}-${{ matrix.buildplat[1] }}
 
