@@ -35,7 +35,7 @@ jobs:
         persist-credentials: false
 
     - name: Setup Python
-      uses: astral-sh/setup-uv@0c5e2b8115b80b4c7c5ddf6ffdd634974642d182
+      uses: astral-sh/setup-uv@eb1897b8dc4b5d5bfe39a428a8f2304605e0983c
       with:
         python-version: ${{ matrix.compiler-pyversion[1] }}
         enable-cache: false
