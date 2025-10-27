@@ -124,7 +124,7 @@ jobs:
         fetch-tags: true
         persist-credentials: false
 
-    - uses: astral-sh/setup-uv@0c5e2b8115b80b4c7c5ddf6ffdd634974642d182
+    - uses: astral-sh/setup-uv@85856786d1ce8acfbcc2f13a5f3fbd6b938f9f41
       with:
         python-version: ${{ matrix.version }}
         enable-cache: false
